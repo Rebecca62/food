@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web.css">
+    <title>La comida</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="nav">
+            <div class="logo"><h1><b>La Comida</b></h1></div>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+            <div>
+                <input class="signin" type="submit" value="Sign In" name="Signin">
+                <input class="signup" type="submit" value="Sign Up" name="Signup">
+            </div>
+        </div>
+    </section>
+    <section class="grid">
+        <div class="content">
+            <div class="content-left">
+                <div class="info">
+                    <h2>Order The Best <br> Meal Anytime </h2>
+                    <p>Hey, our delicious meal awaits you!, <br>
+                       We are always near to you with great food</p>
+                </div>
+                <button>Explore Meal</button>
+            </div>
+            <div class="content-right">
+                <div class="image-slider">
+                    <img id="heroImage" src="img_6-removebg-preview.png" alt="food">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="category">
+        <div class="list-items">
+            <h3>Popular Dishes</h3>
+            <div class="card-list">
+                <div class="card">
+                    <img src="burger-removebg-preview.png" alt="Beef Burger">
+                    <div class="food-title">
+                        <h1>Beef Burger</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>A seasoned beef patty with fresh lettuce, tomato, and cheese.</p>
+                    </div>
+                    <div class="price">
+                        <span>#15,000</span><span></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="egusi-removebg-preview.png" alt="Eba and Egusi">
+                    <div class="food-title">
+                        <h1>Eba and Egusi</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Rich egusi soup served with soft eba for a classic Nigerian meal.</p>
+                    </div>
+                    <div class="price">
+                        <span>#15,000</span><span></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="jollof_rice_1-removebg-preview.png" alt="Jollof Rice">
+                    <div class="food-title">
+                        <h1>Jollof Rice</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Spicy jollof rice cooked with tomatoes, peppers, and aromatic spices.</p>
+                    </div>
+                    <div class="price">
+                        <span>#15,000</span><span></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="fried_rice-removebg-preview.png" alt="Fried Rice">
+                    <div class="food-title">
+                        <h1>Fried Rice</h1>
+                    </div>
+                    <div class="desc-food">
+                        <p>Colorful fried rice with vegetables, shrimp, and savory seasonings.</p>
+                    </div>
+                    <div class="price">
+                        <span>#15,000</span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const heroImages = [
+            "Stir-Fried_Noodles.png",
+            "Biryani.png"
+        ];
+
+        const heroImage = document.getElementById("heroImage");
+        let heroIndex = 0;
+
+        setInterval(() => {
+            heroIndex = (heroIndex + 1) % heroImages.length;
+            heroImage.src = heroImages[heroIndex];
+        }, 3000);
+    </script>
+</body>
+</html>
